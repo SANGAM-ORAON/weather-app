@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: rgb(31, 97, 145);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  padding: 20px;
+}
+
+.container {
+  width: 90%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-box button {
+  padding: 12px 20px;
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.search-box button:hover {
+  background: #eeeeee;
+}
+
+input:focus, .search-box button:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.25);
+  outline-offset: 2px;
+}
+
+.search-box input, .search-box button {
+  min-height: 44px;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.weather-card img {
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+}
+
+.details {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 15px;
+  width: 48%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  body {
+    align-items: flex-start;
+    padding-top: 28px;
+  }
+
+  .container {
+    max-width: 520px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-box button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .weather-card img {
+    width: 100px;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .box {
+    width: 100%;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logo-1.png">
+  <title>MAGNAS | Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Search city...">
+      <button onclick="getWeather()">Search</button>
+    </div>
+
+    <div class="weather-card" id="weatherCard" style="display:none;">
+      <h2 id="cityName"></h2>
+      <img id="weatherIcon" src="" alt="">
+      <h1 id="temperature"></h1>
+      <p id="description"></p>
+
+      <div class="details">
+        <div class="box">
+          <h3>Humidity</h3>
+          <p id="humidity"></p>
+        </div>
+        <div class="box">
+          <h3>Wind</h3>
+          <p id="wind"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
